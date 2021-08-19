@@ -1,13 +1,14 @@
 // BMI Calculator
 
 #include<stdio.h>
+#include<math.h>
 int main()
 {
     float w,h;
-    printf("This is BMI Calculator, Enter your weight in kg. and your height in cm. : ");
+    printf("This is BMI Calculator, Enter your weight in kg. and your height in metres. : ");
 	scanf("%f %f", &w, &h);
     
-	float BMI = w/((h/100)*(h/100));
+    float BMI = (round(w)/pow(h,2));
     if (BMI < 18.5)
     {
         printf("Underweight");
